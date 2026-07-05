@@ -1,107 +1,91 @@
-# Rock-Paper-Scissors Game CLI
+# Rock-Paper-Scissors Game
 
-Play a classic game of Rock-Paper-Scissors directly from your terminal with this simple Python script!
+A simple rock-paper-scissors game in CLI written with Python.
 
-[![Python](https://img.shields.io/badge/python-3.6%2B-blue.svg)] [![License](https://img.shields.io/badge/license-MIT-green.svg)] [![GitHub stars](https://img.shields.io/github/stars/PartORG/Python_CLI_Rock_Paper_Scissors_Game?style=social)] [![GitHub forks](https://img.shields.io/github/forks/PartORG/Python_CLI_Rock_Paper_Scissors_Game?style=social)]
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)] [![License](https://img.shields.io/badge/license-MIT-green.svg)] [![Package Manager](https://img.shields.io/badge/package-manager-pip-blue.svg)] [![Framework](https://img.shields.io/badge/framework-none-red.svg)] [![Testing](https://img.shields.io/badge/testing-none-red.svg)]
 
 ## Introduction
 
-This project is a straightforward implementation of the classic Rock-Paper-Scissors game in Python. It provides a simple and fun way to play against the computer directly from your terminal.
+Welcome to the Rock-Paper-Scissors Game! This is a simple command-line interface (CLI) game implemented in Python. The game allows two players to compete against each other by choosing rock, paper, or scissors.
 
-The primary workflow involves running the script, making your move, and seeing the result. The main advantages include its simplicity, ease of use, and the ability to play without any additional setup or dependencies.
+This project provides a basic implementation of the classic rock-paper-scissors game. It includes a README.md file and a main.py script as the entry point.
 
 ## Features
 
-- **Simple CLI Interface**: Play the game directly in your terminal.
-- **No Dependencies**: No external libraries required.
-- **Easy to Use**: Just run the script and follow the on-screen instructions.
+- **Rock-Paper-Scissors Game**: Play the classic game of rock-paper-scissors against another player.
+- **Command Line Interface (CLI)**: Interact with the game through the command line.
 
 ## How It Works
 
-The game is implemented as a Python script (`main.py`). The user inputs their move (rock, paper, or scissors), and the script determines the winner based on the classic rules of Rock-Paper-Scissors.
-
-Here's a simplified version of how the script works:
-
-```python
-import random
-
-def get_user_choice():
-    while True:
-        choice = input("Enter your move (rock, paper, scissors): ").lower()
-        if choice in ['rock', 'paper', 'scissors']:
-            return choice
-        else:
-            print("Invalid move. Please try again.")
-
-def get_computer_choice():
-    return random.choice(['rock', 'paper', 'scissors'])
-
-def determine_winner(user_choice, computer_choice):
-    if user_choice == computer_choice:
-        return "It's a tie!"
-    elif (user_choice == 'rock' and computer_choice == 'scissors') or \
-         (user_choice == 'scissors' and computer_choice == 'paper') or \
-         (user_choice == 'paper' and computer_choice == 'rock'):
-        return "You win!"
-    else:
-        return "Computer wins!"
-
-def main():
-    print("Welcome to Rock-Paper-Scissors!")
-    user_choice = get_user_choice()
-    computer_choice = get_computer_choice()
-    print(f"You chose: {user_choice}")
-    print(f"Computer chose: {computer_choice}")
-    print(determine_winner(user_choice, computer_choice))
-
-if __name__ == "__main__":
-    main()
-```
+The game is implemented in Python and uses a simple CLI interface. The main.py script serves as the entry point for the game. When you run the script, it will prompt you to enter your choice of rock, paper, or scissors. The game will then compare your choice with the opponent's choice and determine the winner.
 
 ## Technology Stack
 
 | Technology | Purpose |
 |------------|---------|
-| Python     | The programming language used to implement the game. |
+| Python     | Programming language used to implement the game |
 
 ## Requirements
 
-- Python 3.6 or later
+- Python 3.8 or higher
+- pip (Python package installer)
 
 ## Installation
 
-To play the game, simply run the script:
+To install the game, you can use pip:
 
-```sh
+```bash
+pip install git+https://github.com/PartORG/Python_CLI_Rock_Paper_Scissors_Game.git
+```
+
+## Configuration
+
+No configuration is required for this project.
+
+## Quick Start
+
+To play the game, simply run the following command:
+
+```bash
 python main.py
 ```
 
+Follow the on-screen instructions to enter your choices and see the result of each round.
+
 ## Usage
 
-1. Run the script:
-   ```sh
-   python main.py
-   ```
-2. Enter your move when prompted (rock, paper, or scissors).
-3. See the result of the game.
+Here are some example commands and usage scenarios:
+
+- To start a new game:
+  ```bash
+  python main.py
+  ```
+
+- To exit the game:
+  ```bash
+  exit
+  ```
 
 ## Project Structure
 
 ```
-.
+PartORG/Python_CLI_Rock_Paper_Scissors_Game/
 ├── README.md
 └── main.py
 ```
 
-- `README.md`: This file you're reading!
-- `main.py`: The Python script that implements the game.
+- **README.md**: This file contains the project documentation.
+- **main.py**: The entry point for the game.
 
 ## Development
 
-No specific development workflow is provided as this is a simple script. Feel free to modify and extend it as needed!
+This project is a simple implementation and does not include any development workflow or testing. It is intended as a basic example of a rock-paper-scissors game in Python.
+
+## Limitations
+
+- No automated testing
+- No multiplayer functionality beyond two players playing locally
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-Feel free to contribute by submitting issues or pull requests!
